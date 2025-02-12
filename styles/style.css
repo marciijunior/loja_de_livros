@@ -1,12 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
     --cor-de-fundo: #d4d4d4;
+    --cor-preta: #000000;
     --cor-bege: #fffae9;
+    --cor-paleta-um:#d8ccb2;
+    --cor-paleta-dois:#ccbd9e;
+    --cor-paleta-tres:#495168;
+    --cor-paleta-quatro:#2a2344;
+    --cor-paleta-cinco:#260729;
+
+
 }
 
 body {
     background-color: var(--cor-de-fundo);
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 .cabecalho__menu {
@@ -14,7 +25,7 @@ body {
     height: 30px;
     background-image: url(../assets/menu.png);
     display: inline-block;
-    background-size: 30px auto; 
+    background-size: 30px auto;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -25,10 +36,11 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    max-width: 100%; 
-    width: 100%; 
+    max-width: 100%;
+    width: 100%;
     height: auto;
     box-sizing: border-box;
+    position: relative;
 }
 
 .container {
@@ -39,7 +51,7 @@ body {
 }
 
 .container img {
-    max-width: 50px; 
+    max-width: 50px;
     height: auto;
 }
 
@@ -50,7 +62,7 @@ body {
 }
 
 .container2 img {
-    max-width: 50px; 
+    max-width: 50px;
     height: auto;
 }
 
@@ -66,6 +78,50 @@ body {
 }
 
 .cabecalho__imagens img {
-    max-width: 50px; 
-    height: auto; 
+    max-width: 50px;
+    height: auto;
+}
+.lista__menu {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    text-decoration: none;
+    width: 20vw;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    margin: 0;
+    padding: 0;
+    left: 0;
+}
+
+.container__botao:checked ~ .lista__menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.lista__menu__titulo,
+.lista__menu__item {
+    padding: 1em;
+    background-color: var(--cor-bege);
+    text-decoration: none;
+    font-family: "Montserrat", serif;
+    color: #2a2344;
+    margin:0;
+}
+
+.lista__menu__titulo {
+    font-weight: bold;
+}
+
+.lista__menu__item {
+    color: var(--cor-preta);
+}
+
+.lista__menu__link {
+    text-decoration: none;
+    color: var(--cor-preta);
+}
+
+.container__botao {
+    display: none;
 }
