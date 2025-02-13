@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url("carrossel.css");
+
 
 :root {
     --cor-branco: #ffffff;
@@ -44,7 +46,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 790px;
+    gap: 210px;
     padding-left: 2%;
     }
 
@@ -68,7 +70,7 @@ body {
 }
 .container img,
 .cabecalho__imagens img {
-    max-width: 200px;
+    max-width: 100px;
     height: auto;
 }
 
@@ -106,6 +108,7 @@ body {
     background-color: var(--cor-bege);
     font-family: "Montserrat", sans-serif;
     margin: 0;
+    font-size:1vw;
 }
 
 .lista__menu__titulo {
@@ -181,5 +184,6 @@ body {
     position: absolute;
     right: 1em;
     width: 20px; 
-    height: 20px; 
+    height: 20px;
+
 }
