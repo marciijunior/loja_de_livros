@@ -69,6 +69,54 @@
             <div class="swiper-button-next"></div>
         </div>
     </section>
+    <div class="card">
+        <div class="card__descricao">
+            <div class="descricao__conteudo">
+                <h3 class="descricao__titulo">Sugestão baseada em #...</h3>
+                <h2 class="descricao__titulo-livro">Angular 11</h2>
+                <p class="descricao__texto">Construindo uma aplicação integrada com a plataforma</p>
+                <div class="card__botoes">
+                    <ul class="botoes">
+                        <li class="botoes__item">
+                            <img src="./assets/favoritos.png" alt="Favoritar livro">
+                        </li>
+                        <li class="botoes__item">
+                            <img src="./assets/compras.png" alt="Adicionar ao carrinho de compras">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+
+            <div class="descricao__conteudo">
+                <h3 class="descricao__titulo">Sugestão baseada em #...</h3>
+                <h2 class="descricao__titulo-livro">FireBase</h2>
+                <p class="descricao__texto">Construindo uma aplicação integrada com a plataforma</p>
+                <div class="card__botoes">
+                    <ul class="botoes">
+                        <li class="botoes__item">
+                            <img src="./assets/favoritos.png" alt="Favoritar livro">
+                        </li>
+                        <li class="botoes__item">
+                            <img src="./assets/compras.png" alt="Adicionar ao carrinho de compras">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="coluna__card">
+                <img src="./assets/angular.png" alt="Capa do livro Angular" class="descricao__imagem">
+                <a href="#" class="botoes__ancora">Saiba mais</a>
+            </div>
+            <div class="coluna__card">
+                <img src="./assets/angular.png" alt="Capa do livro Angular" class="descricao__imagem">
+                <a href="#" class="botoes__ancora">Saiba mais</a>
+            </div>
+        </div>
+    </div>
+    
+
+    </div>
     
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -80,7 +128,7 @@
             cardsEffect: {
                 slideShadows: true,  // Sombras nos cards
                 rotate: 10,  // Ângulo de rotação dos cards
-                perSlideOffset: 10,  // Distância entre os cards
+                perSlideOffset: 50,  // Distância entre os cards
             },
             pagination: {
                 el: '.swiper-pagination',
@@ -90,14 +138,8 @@
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-            speed: 800,  // Velocidade da transição
+            speed: 100,  // Velocidade da transição
             loop: true,  // Habilita o loop infinito
-            breakpoints: {
-                320: { slidesPerView: 1 },  // 1 card em telas pequenas
-                768: { slidesPerView: 2 },  // 2 cards em tablets
-                1024: { slidesPerView: 3 },  // 3 cards em telas médias
-                1440: { slidesPerView: 4 }   // 4 cards em telas grandes
-            },
         });
     </script>
 </body>
