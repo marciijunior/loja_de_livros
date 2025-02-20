@@ -9,31 +9,39 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
+.carrossel {
+    max-width: auto; /* Ajuste conforme necessário */
+    margin: 0 auto;
+    padding: 0 0;
+    overflow: hidden; /* Impede que o conteúdo ultrapasse os limites */
+}
+
 .swiper {
     border-radius: 8%;
     width: 100%;
-    max-width: 1500px;
+    max-width: 100%; /* Garante que o carrossel não ultrapasse o contêiner */
     margin: 0 auto;
-    padding: 20px;
+    padding: 0; /* Remove o padding interno */
+    box-shadow: none; /* Remove a sombra do contêiner do Swiper */
 }
 
 .swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 250px;
-    height: 350px;
     border-radius: 16px;
-    transition: transform 0.3s ease-in-out; /* Efeito de transição suave */`
+    transition: transform 0.3s ease-in-out; /* Efeito de transição suave */
     padding: 2%;
+
 }
 
 .swiper-slide img {
-    width: 100%;
+    width: 60%;
     height: auto;
     border-radius: 16px;
     object-fit: cover; /* Mantém a imagem proporcional, cobrindo o espaço do card */
 }
+
 
 .swiper-slide-active {
     transform: scale(1.05);  /* Efeito de zoom no card ativo */
