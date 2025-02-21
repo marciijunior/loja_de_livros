@@ -1,0 +1,73 @@
+.topicos {
+    background: var(--degrade1);
+    text-align: center;
+    padding: 1em;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+.topicos:hover {
+    box-shadow: 10px 6px 25px rgb(0, 0, 0);
+}
+
+.topicos__titulo {
+    color: var(--cor-preto);
+    font-weight: 500;
+    margin: 1em;
+}
+
+.topicos__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1%;
+}
+
+.topicos__item {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5); /* Sombra */
+    padding: 0.3% 0 0.3% 0; /* Espaçamento interno */
+    margin: 0.4em 1em 0 0; /* Margem */
+    border-radius: 6px; /* Bordas arredondadas */
+    position: relative; /* Para posicionar o pseudo-elemento */
+    overflow: hidden; /* Esconde o que ultrapassar o item */
+    background: transparent; /* Fundo transparente */
+    transition: transform 0.3s ease; /* Transição para o scale */
+}
+
+.topicos__item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Começa fora do item, à esquerda */
+    width: 100%; /* Ocupa 100% da largura */
+    height: 100%; /* Ocupa 100% da altura */
+    background: var(--degrade3); /* Gradiente */
+    transition: left 1s ease; /* Anima a propriedade left */
+    z-index: -1; /* Fica atrás do conteúdo */
+}
+
+.topicos__item:hover {
+    transform: scale(1); /* Aumenta o tamanho do item */
+}
+
+.topicos__item:hover::before {
+    left: 0; /* Move o pseudo-elemento para a direita */
+}
+
+/* Animação de volta */
+.topicos__item::before {
+    transition:  0.3s ease; /* Transição suave para a posição */
+}
+
+
+.topicos__link {
+    color: var(--cor-preto);
+    padding: 1em;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.topicos__link:hover {
+    color: var(--cor-branco)
+}

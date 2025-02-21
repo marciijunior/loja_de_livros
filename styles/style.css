@@ -1,23 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url("carrossel.css");
-
+@import url("topicos.css");
+@import url("contatos.css");
+@import url("rodape.css");
 
 :root {
     --cor-branco: #ffffff;
     --cor-fundo: #d4d4d4;
-    --cor-preta: #000;
+    --cor-preta: #000000;
     --cor-bege: #fffae9;
     --cor-paleta-1: #d8ccb2;
     --cor-paleta-2: #ccbd9e;
     --cor-paleta-3: #495168;
-    --cor-paleta-4: #2a2344;
-    --cor-paleta-5: #260729;
+    --cor-paleta-4: #1a4141;
+    --cor-paleta-5: #82a374;
+    --degrade1: radial-gradient(circle at 70% 50%, #ccbd9e, #fffae9);
+    --degrade2: radial-gradient(circle at 70% 50%, #d4d4d4, #fffae9);
+    --degrade3: radial-gradient(circle at 70% 50%, #82a374, #1a4141);
+    --degrade4: radial-gradient(circle at 100% 35%, #bdf1bd, #fff2c5);
 }
+
 
 body {
     font-family: "Montserrat", sans-serif;
     font-size: 24px;
-    background-color: var(--cor-fundo);
+    background: var(--degrade3);
     margin: 0;
     padding: 0;
     width: 100%;
@@ -128,7 +135,7 @@ body {
 }
 
 .banner {
-    background: radial-gradient(circle at 70% 50%, var(--cor-paleta-2), var(--cor-bege));
+    background: var(--degrade1);
     font-family: "Montserrat", sans-serif;
     color: var(--cor-paleta-5);
     display: flex;

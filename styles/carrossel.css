@@ -30,13 +30,13 @@
     justify-content: center;
     align-items: center;
     border-radius: 16px;
-    transition: transform 0.3s ease-in-out; /* Efeito de transição suave */
+    transition: transform 0.3s; /* Efeito de transição suave */
     padding: 2%;
-
+    box-shadow: none;
 }
 
 .swiper-slide img {
-    width: 60%;
+    width: 130%;
     height: auto;
     border-radius: 16px;
     object-fit: cover; /* Mantém a imagem proporcional, cobrindo o espaço do card */
@@ -44,7 +44,12 @@
 
 
 .swiper-slide-active {
-    transform: scale(1.05);  /* Efeito de zoom no card ativo */
+    transform: scale(1);  /* Efeito de zoom no card ativo */
+}
+
+.swiper-wrapper {
+    display: flex;
+    transition-timing-function: linear !important; /* Rolagem suave */
 }
 
 .swiper-pagination {
@@ -57,7 +62,7 @@
 }
 
 .card {
-    background: linear-gradient(135deg, var(--cor-paleta-2), var(--cor-bege));
+    background: var(--degrade1);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     border-radius: 16px;
     margin: 1.5em auto;
@@ -65,7 +70,7 @@
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 800px;
+    max-width: 50%;
 }
 
 .card:hover {
@@ -160,14 +165,40 @@
     display: inline-block;
     padding: 10px 20px;
     background-color: #584e3765;
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     border-radius: 8px;
-    font-weight: 600;
-    transition: background-color 0.3s;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5); /* Sombra */
+    font-weight: 300;
+    transition: background-color 1s;
     margin-top: 1em;
+    position: relative; /* Para posicionar o pseudo-elemento */
+    overflow: hidden; /* Esconde o que ultrapassar o item */
+    background: transparent; /* Fundo transparente */
+    transition: transform 0.3s ease; /* Transição para o scale */
+}
+
+.botoes__ancora::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -110%; /* Começa fora do item, à esquerda */
+    width: 100%; /* Ocupa 100% da largura */
+    height: 100%; /* Ocupa 100% da altura */
+    background: var(--degrade3); /* Gradiente */
+    transition: left 1s ease; /* Anima a propriedade left */
+    z-index: -1; /* Fica atrás do conteúdo */
 }
 
 .botoes__ancora:hover {
-    background-color: #6ee769;
+    transform: scale(1.02); /* Aumenta o tamanho do item */
+    color: var(--cor-branco)
+}
+
+.botoes__ancora:hover::before {
+    left: 0; /* Move o pseudo-elemento para a direita */
+}
+
+.botoes__ancora::before {
+    transition:  0.3s ease; /* Transição suave para a posição */
 }
