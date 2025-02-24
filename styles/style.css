@@ -195,7 +195,15 @@ body {
 }
 
 @media (max-width: 1200px){
-    
+    .container__titulo, .container__titulo--negrito {
+        font-size: 3em;
+    }
+    .container__titulo {
+        font-weight: 400;
+    }
+    .container__titulo--negrito {
+        font-weight: 600;
+    }
 }
 
 @media (max-width: 800px) {
