@@ -109,6 +109,7 @@
 }
 
 .descricao__texto {
+    margin: 0 10% 1% 0;
     font-size: 1.2em;
     color: #555;
     line-height: 1.6;
