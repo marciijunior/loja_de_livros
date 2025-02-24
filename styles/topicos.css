@@ -71,3 +71,29 @@
 .topicos__link:hover {
     color: var(--cor-branco)
 }
+
+@media (max-width: 800px) {
+    .topicos {
+        padding: 0.5em;
+    }
+
+    .topicos__titulo {
+        font-size: 1.2em;
+        margin: 0.5em;
+    }
+
+    .topicos__lista {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    .topicos__item {
+        margin: 0.2em 0;
+        padding: 0.5em;
+    }
+
+    .topicos__link {
+        font-size: 1em;
+        padding: 0.5em;
+    }
+}

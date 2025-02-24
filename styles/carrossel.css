@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 .carrossel__titulo {
     color: var(--cor-preta);
     background-color: var(--cor-bege);
@@ -10,19 +12,19 @@
 }
 
 .carrossel {
-    max-width: auto; /* Ajuste conforme necessário */
+    max-width: auto;
     margin: 0 auto;
     padding: 0 0;
-    overflow: hidden; /* Impede que o conteúdo ultrapasse os limites */
+    overflow: hidden;
 }
 
 .swiper {
     border-radius: 8%;
     width: 100%;
-    max-width: 100%; /* Garante que o carrossel não ultrapasse o contêiner */
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0; /* Remove o padding interno */
-    box-shadow: none; /* Remove a sombra do contêiner do Swiper */
+    padding: 0;
+    box-shadow: none;
 }
 
 .swiper-slide {
@@ -30,7 +32,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 16px;
-    transition: transform 0.3s; /* Efeito de transição suave */
+    transition: transform 0.3s;
     padding: 2%;
     box-shadow: none;
 }
@@ -39,17 +41,16 @@
     width: 130%;
     height: auto;
     border-radius: 16px;
-    object-fit: cover; /* Mantém a imagem proporcional, cobrindo o espaço do card */
+    object-fit: cover;
 }
 
-
 .swiper-slide-active {
-    transform: scale(1);  /* Efeito de zoom no card ativo */
+    transform: scale(1); 
 }
 
 .swiper-wrapper {
     display: flex;
-    transition-timing-function: linear !important; /* Rolagem suave */
+    transition-timing-function: linear !important;
 }
 
 .swiper-pagination {
@@ -113,7 +114,6 @@
     line-height: 1.6;
 }
 
-/* Imagem do livro */
 .descricao__imagem {
     width: 100%;
     max-width: 180px;
@@ -134,7 +134,6 @@
     margin: 0 11% 0 11%;
 }
 
-/* Botões */
 .card__botoes {
     margin-top: auto;
     display: flex;
@@ -160,7 +159,6 @@
     transform: scale(1.2);
 }
 
-/* Botão Saiba Mais */
 .botoes__ancora {
     display: inline-block;
     padding: 10px 20px;
@@ -168,37 +166,86 @@
     color: rgb(0, 0, 0);
     text-decoration: none;
     border-radius: 8px;
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5); /* Sombra */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
     font-weight: 300;
     transition: background-color 1s;
     margin-top: 1em;
-    position: relative; /* Para posicionar o pseudo-elemento */
-    overflow: hidden; /* Esconde o que ultrapassar o item */
-    background: transparent; /* Fundo transparente */
-    transition: transform 0.3s ease; /* Transição para o scale */
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    transition: transform 0.3s ease; 
 }
 
 .botoes__ancora::before {
     content: '';
     position: absolute;
     top: 0;
-    left: -110%; /* Começa fora do item, à esquerda */
-    width: 100%; /* Ocupa 100% da largura */
-    height: 100%; /* Ocupa 100% da altura */
-    background: var(--degrade3); /* Gradiente */
-    transition: left 1s ease; /* Anima a propriedade left */
-    z-index: -1; /* Fica atrás do conteúdo */
+    left: -110%; 
+    width: 100%;
+    height: 100%; 
+    background: var(--degrade3);
+    transition: left 1s ease;
+    z-index: -1;
 }
 
 .botoes__ancora:hover {
-    transform: scale(1.02); /* Aumenta o tamanho do item */
+    transform: scale(1.02);
     color: var(--cor-branco)
 }
 
 .botoes__ancora:hover::before {
-    left: 0; /* Move o pseudo-elemento para a direita */
+    left: 0;
 }
 
 .botoes__ancora::before {
-    transition:  0.3s ease; /* Transição suave para a posição */
+    transition:  0.3s ease;
+}
+
+@media (max-width: 800px) {
+
+    .carrossel__titulo {
+        font-size: 1.8vh;
+        padding: 0.3em;
+    }
+
+    .swiper-wrapper {
+    }
+
+    .swiper-slide img {
+        width: 130%;
+        border-radius: 8px;
+    }
+
+    .card {
+        max-width: 70%;
+        padding: 1em;
+        margin: 1em auto;
+    }
+
+    .descricao__titulo-livro {
+        font-size: 2vh;
+    }
+
+    .descricao__texto {
+        font-size: 1.4vh;
+    }
+
+    .descricao__imagem {
+        max-width: 10vh;
+    }
+
+    .card__botoes {
+        padding: 0;
+        gap: 0.5em;
+    }
+
+    .botoes__item img {
+        width: 3vh;
+        height: 3vh;
+    }
+
+    .botoes__ancora {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
 }
