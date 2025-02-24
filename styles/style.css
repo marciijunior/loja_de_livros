@@ -194,6 +194,10 @@ body {
     width: 2vh;
 }
 
+@media (max-width: 1200px){
+    
+}
+
 @media (max-width: 800px) {
     body {
         font-size: 1em;

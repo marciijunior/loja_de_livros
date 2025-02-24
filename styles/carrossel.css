@@ -95,21 +95,21 @@
 /* Títulos e textos */
 .descricao__titulo {
     color: var(--cor-preta);
-    font-size: 15px;
+    font-size: 1.5em;
     margin-bottom: 0.5em;
     font-weight: 400;
 }
 
 .descricao__titulo-livro {
     color: #333;
-    font-size: 32px;
+    font-size: 2.2em;
     margin: 0.3em 0;
     font-weight: 300;
     letter-spacing: 0.5px;
 }
 
 .descricao__texto {
-    font-size: 18px;
+    font-size: 1.2em;
     color: #555;
     line-height: 1.6;
 }
@@ -209,6 +209,7 @@
     }
 
     .swiper-wrapper {
+        padding: 0;
     }
 
     .swiper-slide img {
